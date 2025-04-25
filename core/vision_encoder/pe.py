@@ -419,9 +419,6 @@ class VisionTransformer(nn.Module):
         m, u = self.load_state_dict(_sd, strict=False)
         logger.info(f"Missing keys for loading vision encoder: {m}")
         logger.info(f"Unexpected keys for loading vision encoder: {u}")
-        print(f"Missing keys for loading vision encoder: {m}")
-        print(f"Unexpected keys for loading vision encoder: {u}")
-
 
     def truncate(self, layer_idx: int):
         """ Delete layers so the last layer is the given layer index. """
