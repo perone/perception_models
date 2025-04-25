@@ -11,6 +11,10 @@ setup(
     url="https://github.com/facebookresearch/perception_models",
     packages=find_packages(),
     install_requires=required,
+    include_package_data=True,
+    package_data={
+        '': ['bpe_simple_vocab_16e6.txt.gz'],
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: Other/Proprietary License",
